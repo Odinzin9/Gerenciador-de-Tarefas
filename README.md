@@ -14,5 +14,6 @@ Como Executar o ProjetoClone este repositório ou baixe os arquivos em sua máqu
 Abra o arquivo index.html em qualquer navegador moderno.
 
 
-
-👤 AutorNome: Odovaldo Dossi de Lima RU: 5289674 Instituição: Centro Universitário Internacional UNINTER Professor: Rodrigo da S. do Nascimento / Osmar Dias Jr
+AutorNome: Odovaldo Dossi de Lima RU: 5289674 
+Instituição: Centro Universitário Internacional UNINTER 
+Professor: Rodrigo da S. do Nascimento / Osmar Dias Jr
