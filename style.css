@@ -1,0 +1,149 @@
+/* 1. RESET E VARIÁVEIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primaria: #2c3e50;
+    --secundaria: #7f8c8d;
+    --fundo: #f4f4f4;
+    --branco: rgba(255, 255, 255, 0.9);
+    --sucesso: #27ae60;
+    --erro: #e74c3c;
+    --alerta: #f3dd12;
+    --madeira: #5d4037;
+}
+
+/* 2. ESTILOS DE BASE */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background-image: url('pexels-pixabay-268976.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+}
+
+header {
+    background-color: var(--primaria);
+    color: #9e6907;
+    padding: 2rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.header-icon {
+    height: 1.5em; /* Proporcional ao texto, aumentado para melhor visibilidade */
+    width: auto;
+}
+
+#busca {
+    background-color: var(--madeira);
+    color: white;
+    border: 1px solid #3e2723;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 6px;
+    width: 100%;
+}
+
+#busca::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* 3. LAYOUT E VIDRO */
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.glass-card {
+    background: var(--branco);
+    backdrop-filter: blur(10px);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* 4. FORMULÁRIO E BOTÕES */
+.campo { margin-bottom: 15px; }
+
+input, textarea, select {
+    padding: 10px;
+    border: 1px solid var(--madeira);
+    border-radius: 8px;
+    width: 100%;
+}
+
+#task-form button {
+    background: transparent;
+    color: var(--primaria);
+    border: 2px solid var(--primaria);
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#task-form button:hover {
+    background: var(--primaria);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* 5. CARDS E ANIMAÇÕES */
+.tarefa-card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-left: 6px solid #ccc;
+    animation: aparecer 0.6s ease-out forwards;
+}
+
+.prioridade-alta { border-left-color: var(--erro); }
+.prioridade-media { border-left-color: var(--alerta); }
+.prioridade-baixa { border-left-color: var(--sucesso); }
+
+.btn-excluir {
+    background-color: var(--erro);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+footer {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (min-width: 768px) {
+    main { flex-direction: row; align-items: flex-start; }
+    #cadastro { flex: 1; position: sticky; top: 20px; }
+    #lista { flex: 2; }
+}

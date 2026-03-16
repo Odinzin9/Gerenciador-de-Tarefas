@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas - RU: 5289674</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Tarefas <img src="Mother Mãe GIF by Dr. Joie.gif" alt="Ícone animado" class="header-icon"></h1>
+    </header>
+
+    <nav>
+        <div class="ferramentas">
+            <label for="busca">Pesquisar tarefa:</label>
+            <input type="text" id="busca" placeholder="Digite o título...">
+        </div>
+    </nav>
+
+    <main>
+        <section id="cadastro" class="glass-card">
+            <h2 id="form-title">Nova Tarefa</h2>
+            <form id="task-form">
+                <input type="hidden" id="task-index" value="-1">
+                
+                <div class="campo">
+                    <label for="titulo">Título da Tarefa:</label>
+                    <input type="text" id="titulo" required>
+                </div>
+                <div class="campo">
+                    <label for="descricao">Descrição:</label>
+                    <textarea id="descricao" required></textarea>
+                </div>
+                <div class="campo">
+                    <label for="data">Data de Criação:</label>
+                    <input type="date" id="data" required>
+                </div>
+                <div class="campo">
+                    <label for="prioridade">Prioridade:</label>
+                    <select id="prioridade" required>
+                        <option value="Baixa">Baixa</option>
+                        <option value="Média">Média</option>
+                        <option value="Alta">Alta</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="status">Status:</label>
+                    <select id="status" required>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Concluída">Concluída</option>
+                    </select>
+                </div>
+                <button type="submit" id="btn-submit">Cadastrar Tarefa</button>
+                <button type="button" id="btn-cancel" style="display:none;" onclick="cancelarEdicao()">Cancelar</button>
+            </form>
+        </section>
+
+        <section id="lista" class="glass-card">
+            <h2>Minhas Tarefas</h2>
+            <div id="lista-tarefas">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por: Odovaldo Dossi de Lima - RU: 5289674</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
